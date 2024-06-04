@@ -9,8 +9,12 @@ import Todos from './pages/Saidber/Todos/Todos'
 import Albums from './pages/Saidber/Albums/Albums'
 import Comments from './pages/Saidber/Comments/Comments'
 import Post from './pages/Saidber/Post/Post'
+// import Aos from 'aos';
 
 const App = () => {
+  // useEffect(() => {
+  //   Aos.init({duration: 1000})
+  // },[])
   return (
     <div>
  

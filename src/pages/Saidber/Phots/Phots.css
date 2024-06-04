@@ -1,0 +1,102 @@
+.photos {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.cards {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 60px;
+    margin-top: 30px;
+
+}
+
+.card_1 {
+    border: 1px solid gray;
+    border-radius: 12px;
+    background: white;
+    width: 240px;
+    height: 400px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.card_1 img {
+    width: 240px;
+    height: 150px;
+    object-fit: cover;
+    margin-left: -20px;
+    background-size: cover;
+}
+
+.span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.span svg {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.card_1 h3 {
+    color: rgb(108, 203, 200);
+    position: absolute;
+
+}
+
+.card_1 h5 {
+    margin-top: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card_1 img  {
+    transition: .3s linear;
+}
+
+.card_1 h4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 60px;
+
+}
+
+.card_1:hover h4 {
+    /* margin-top: -20px; */
+    opacity: 0;
+}
+
+.card_1 img:hover  {
+    transform: scale(1.08);
+}
+
+.card_1 button {
+    border: none;
+    outline: none;
+    background: rgb(16, 15, 15);
+    color: white;
+    padding: 8px 55px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: .2s linear;
+    position: absolute;
+}
+
+.card_1 {
+    position: relative;
+}
+
+.card_1:hover button { 
+    opacity: 10;
+    margin-top: -40px;
+}
