@@ -35,7 +35,6 @@ const Phots = () => {
             <img src={pro.thumbnailUrl} alt="" />
             <h5>{pro.title}</h5>
             <h3>{pro.price} 1000$ </h3>
-            {/* <h4>{pro.title}</h4> */}
             <button>Add mobile</button>
           </div>
   ))
