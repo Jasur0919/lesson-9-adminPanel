@@ -6,9 +6,13 @@ const Saidbar = () => {
   return (
     <div>
 
+
     <div className="saidbar_all">
+      
     <div className="saidbar_row">
-        <ul>
+    <h1>Logo</h1>
+
+        <ul className=''>
         <li className='saisbar_link'>
             <Link to={'user'}>User</Link>
           </li>
