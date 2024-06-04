@@ -34,8 +34,8 @@ const Albums = () => {
               <thead className=''>
                 <tr>
                   <td>T/R</td> 
-                  <td>Name</td>
-                  <td>Family</td>
+                  <td>Userid</td>
+                  <td>Title</td>
                 
                 </tr>
               </thead>
