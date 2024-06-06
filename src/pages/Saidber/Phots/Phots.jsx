@@ -9,18 +9,20 @@ const Phots = () => {
   
   
   const [user,setUser] = useState([])
+  const [page,setPage] = useState(1)
+  const [lmit,setLmit] = useState(2)
 
   console.log(user);
   useEffect(() =>{
    axios
-   .get('https://jsonplaceholder.typicode.com/photos')
+   .get(`http://jsonplaceholder.typicode.com/Photos?_start=${page}&_limit=${lmit}`)
    .then((res) =>{
     setUser(res.data);
    })
    .catch(arr =>{
     console.log('>>>>>>>>>>>>>>>', arr);
    }) 
-  },[])
+  },[page,lmit])
 
 
   //   C A R D S
@@ -38,12 +40,43 @@ const Phots = () => {
             <button>Add mobile</button>
           </div>
   ))
+
+  const changePage = (type) => {
+    if (type === "prev") {
+      if(page > 1) {
+
+        setPage(prev => prev - 1)
+      }
+    }else {
+      setPage(prev => prev + 1)
+    }
+  } 
   return (
     <div>
         <h1 className='photos'>Phots</h1>
+
+        <div className="row">
+          <div className="col-md-4">
+            <select onChange={(e) => setLmit(e.target.value)} className='form-control  my-2'>
+              <option value="" selected>Select lmit</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+        </div>
       <div className="cards">
         {cards}
       </div>
+
+      
+      <div className="btn d-flex align-items-center gap-3">
+              <button  onClick={() => changePage("prev")}>Prev</button>
+              <p className='fs-3'>{page}</p>
+              <button onClick={() => changePage("next")}>Next</button>
+            </div>
 
     </div>
   )

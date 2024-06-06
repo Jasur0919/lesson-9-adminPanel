@@ -19,13 +19,13 @@ const App = () => {
     <div>
  
  <Routes>
-<Route path='/' element={<Saidbar/>}>
-<Route path='user' element={<User/>}/>
-<Route path='phots' element={<Phots/>}/>
-<Route path='todos' element={<Todos/>}/>
-<Route path='albums' element={<Albums/>}/>
-<Route path='comments' element={<Comments/>}/>
-<Route path='post' element={<Post/>}/>
+  <Route path='/' element={<Saidbar/>}>
+  <Route path='user' element={<User/>}/>
+  <Route path='phots' element={<Phots/>}/>
+  <Route path='todos' element={<Todos/>}/>
+  <Route path='albums' element={<Albums/>}/>
+  <Route path='comments' element={<Comments/>}/>
+  <Route path='post' element={<Post/>}/>
 </Route>
 
  </Routes>
