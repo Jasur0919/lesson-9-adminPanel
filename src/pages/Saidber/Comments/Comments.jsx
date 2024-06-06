@@ -11,7 +11,7 @@ const Comments = () => {
 
   useEffect(() =>{
    axios
-   .get(`http://jsonplaceholder.typicode.com/comments?_start=${page}&_limit=${lmit}`)
+   .get(`https://jsonplaceholder.typicode.com/comments?_start=${page}&_limit=${lmit}`)
    .then((res) =>{
     setUser(res.data);
    })
