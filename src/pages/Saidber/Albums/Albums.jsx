@@ -10,7 +10,7 @@ const Albums = () => {
 
   useEffect(() =>{
    axios
-   .get(`http://jsonplaceholder.typicode.com/Albums?_start=${page}&_limit=${lmit}`)
+   .get(`https://jsonplaceholder.typicode.com/Albums?_start=${page}&_limit=${lmit}`)
    .then((res) =>{
     setUser(res.data);
    })
