@@ -1,0 +1,23 @@
+.sele {
+    width: 300px;
+    height: 30px;
+    margin: 20px 0   ;
+}
+
+.logo {
+    margin: 0 20px !important;
+}
+
+.ali {
+    background: rgb(152, 207, 247);
+    color: white;
+}
+
+.btn button {
+    background: rgb(5, 147, 249);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 25px;
+}

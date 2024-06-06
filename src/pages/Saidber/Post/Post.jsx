@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import './Post.css'
 
 const Post = () => {
   const [user,setUser] = useState([])
@@ -42,10 +43,13 @@ const Post = () => {
 
   return (
     <div>
-        <h1>Post</h1>
+        <h1 className='ali'>Post</h1>
+
+
+<div className="smth">
         
-        <div className="row">
-          <div className="col-md-4">
+        <div className="">
+          <div className="sele">
             <select onChange={(e) => setLmit(e.target.value)} className='form-control  my-2'> 
               <option selected>Select limit</option>
               <option value="2">2</option>
@@ -70,10 +74,11 @@ const Post = () => {
               </tbody>
             </table>
 
-            <div className="bit d-flex align-items-center gap-3">
+            <div className="btn d-flex align-items-center gap-3">
               <button onClick={() => changePage("prev")}>Prev</button>
               <p className='fs-3 mt-2'>{page}</p>
               <button onClick={() => changePage("next")}>Prev</button>
+            </div>
             </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import './Album.css'
 
 const Albums = () => {
   const [user,setUser] = useState([])
@@ -39,10 +40,11 @@ const Albums = () => {
   }
   return (
     <div>
-        <h1>Albums</h1>
+        <h1 className='ali'>Albums</h1>
 
-        <div className="row">
-          <div className="col-md-4">
+<div className="smth">
+        <div className="">
+          <div className="sele">
             <select onChange={(e) => setLmit(e.target.value)} className='form-control  my-2'>
               <option value="" selected>Select lmit</option>
               <option value="2">2</option>
@@ -70,6 +72,7 @@ const Albums = () => {
               <button  onClick={() => changePage("prev")}>Prev</button>
               <p className='fs-3'>{page}</p>
               <button onClick={() => changePage("next")}>Next</button>
+            </div>
             </div>
     </div>
   )

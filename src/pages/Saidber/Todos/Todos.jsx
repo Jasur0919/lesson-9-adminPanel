@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
+import './Todos.css'
 
 const Todos = () => {
 
@@ -41,10 +42,11 @@ const Todos = () => {
   return (
     <div>
 
-        <h1>Todos</h1>
+        <h1 className='ali'>Todos</h1>
 
-        <div className="row">
-          <div className="col-md-4">
+<div className="logo">
+        <div className="">
+          <div className="sele">
             <select onChange={(e) => setLmit(e.target.value)} className='form-control my-2'>
               <option value="" selected>Select limit</option>
               <option value="2">2</option>
@@ -74,7 +76,8 @@ const Todos = () => {
                   <button onClick={() => changePage("prev")}>Prev</button>
                   <p className=' fs-3 mt-3'>{page}</p>
                   <button onClick={() => changePage("next")}>Next</button>
-            </div>     
+            </div>  
+            </div>   
     </div>
   )
 }

@@ -53,10 +53,11 @@ const Phots = () => {
   } 
   return (
     <div>
-        <h1 className='photos'>Phots</h1>
+        <h1 className='ali'>Phots</h1>
 
-        <div className="row">
-          <div className="col-md-4">
+<div className="smth">
+        <div className="">
+          <div className="sele">
             <select onChange={(e) => setLmit(e.target.value)} className='form-control  my-2'>
               <option value="" selected>Select lmit</option>
               <option value="2">2</option>
@@ -77,7 +78,7 @@ const Phots = () => {
               <p className='fs-3'>{page}</p>
               <button onClick={() => changePage("next")}>Next</button>
             </div>
-
+            </div>
     </div>
   )
 }

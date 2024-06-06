@@ -42,11 +42,13 @@ const User = () => {
       }
     } 
   return (
-    <>
-        <h1>User</h1>
+    <div  >
+        <h1 className='ali'>User</h1>
 
-        <div className="row">
-          <div className="col-md-4">
+      
+<div className='smth'>
+<div className="">
+          <div className="sele">
             <select onChange={(e) => setLmit(e.target.value)} className='form-control  my-2'>
               <option value="" selected>Select lmit</option>
               <option value="2">2</option>
@@ -57,8 +59,7 @@ const User = () => {
             </select>
           </div>
         </div>
-
-        <table className='table table-bordered table-hover table-striped'>
+        <table className=' table table-bordered table-hover table-striped'>
               <thead className=''>
                 <tr>
                   <td>T/R</td> 
@@ -80,7 +81,8 @@ const User = () => {
               <p className='fs-3'>{page}</p>
               <button onClick={() => changePage("next")}>Next</button>
             </div>
-    </>
+            </div>
+    </div>
   )
 }
 

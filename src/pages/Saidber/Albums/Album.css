@@ -1,0 +1,10 @@
+.album {
+    background: blue;
+    padding: 5px 0;
+    color: white;
+    top: 0;
+    left: 0;
+    position: sticky;
+    /* width: 100% */
+
+}
