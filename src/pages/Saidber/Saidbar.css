@@ -13,7 +13,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: rgb(22, 140, 224);
+    /* background-color: rgb(22, 140, 224); */
+    background: linear-gradient(to left, rgb(126, 190, 237), rgb(22, 140, 224));
     position: sticky;
     top: 0;
     left: 0;
@@ -40,8 +41,8 @@
  h1 {
     text-align: center;
     padding: 10px 0;
-    /* padding: 10px 0;
-    color: #fff; */
+    /* padding: 10px 0; */
+    color: #fff;
 } 
 
 ul {
