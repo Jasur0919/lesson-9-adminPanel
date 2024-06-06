@@ -46,7 +46,7 @@ const Albums = () => {
         <div className="">
           <div className="sele">
             <select onChange={(e) => setLmit(e.target.value)} className='form-control  my-2'>
-              <option value="" selected>Select lmit</option>
+              <option value="" selected>Select lmit,</option>
               <option value="2">2</option>
               <option value="5">5</option>
               <option value="7">7</option>
