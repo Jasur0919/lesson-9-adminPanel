@@ -87,14 +87,13 @@ ul {
   .card {
     width: calc(50% - 16px); /* Adjust width as needed */
     box-sizing: border-box;
-    color: #fff;
   }
-/* 
+
 .user_link a {
     background: blue !important;
     color: white;
     text-decoration: none;
-  } */
+  }
   
   
   

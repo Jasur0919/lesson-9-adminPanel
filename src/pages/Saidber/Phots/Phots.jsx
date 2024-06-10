@@ -47,7 +47,7 @@ const Phots = () => {
             <Link to={`/single/${pro.id}`} onClick={() => toast.success('success')}> <img src={pro.image} alt="" /></Link>
            
             <h5>{pro.title}</h5>
-            <h3>{pro.price} 1000$ </h3>
+            <h3>{pro.price}   $ </h3>
             <button>Add mobile</button>
           </div>
   ))

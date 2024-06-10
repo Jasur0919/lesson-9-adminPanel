@@ -1,105 +1,3 @@
-// import React,{useState,useEffect} from 'react'
-// import './User.css'
-// import axios from 'axios'
-// import Loading from '../../../components/Loading/Loading'
-
-// const User = () => {
-//   const [user,setUser] = useState([])
-//   const [page, setPage] = useState(1)
-//   const [lmit, setLmit] = useState(2)
-//   const [loading, setLoading] = useState(false)
-//   console.log(page);
-
-
-
-//     useEffect(() =>{
-//       setLoading(true)
-//      axios
-//      .get(`https://jsonplaceholder.typicode.com/users?_start=${page}&_limit=${lmit}`)
-//      .then((res) =>{
-//       setUser(res.data);
-//      })
-//      .catch(arr =>{
-//       console.log('>>>>>>>>>>>>>>>', arr);
-//      }) 
-
-//      .finally(() => { setLoading(false)})
-//     },[page, lmit])
-
-//     let data = user?.map((el, inx) =>(
-//       <tr key={el.id}>
-//         <td>{inx+1}</td>
-//         <td>{el.name}</td>
-//         <td>{el.username}</td>
-//         <td>{el.email}</td>
-//         <td>{el.address.street}</td>
-//       </tr>
-//     ))
-
-//     const changePage = (type) => {
-//       if (type === "prev") {
-//         if(page > 1) {
-
-//           setPage(prev => prev - 1)
-//         }
-//       }else {
-//         setPage(prev => prev + 1)
-//       }
-//     } 
-//   return (
-//     <  >
-//         <h1 className='ali'>User</h1>
-
-      
-//       <div className='smth'>
-//       <div className="">
-//           <div className="sele">
-//             <select onChange={(e) => setLmit(e.target.value)} className='form-control  my-2'>
-//               <option value="" selected>Select lmit</option>
-//               <option value="2">2</option>
-//               <option value="3">3</option>
-//               <option value="4">4</option>
-//               <option value="5">5</option>
-//               <option value="7">7</option>
-//             </select>
-//           </div>
-//         </div>
-       
-//         {
-//           loading ? <Loading/> : <></>
-//         }
-//         <table className=' table table-bordered table-hover table-striped'>
-
-//               <thead className=''>
-//                 <tr>
-//                   <td>T/R</td> 
-//                   <td>Name</td>
-//                   <td>Family</td>
-//                   <td>Email</td>
-//                   <td>Adres</td>
-//                 </tr>
-//               </thead>
-
-//               <tbody>
-                
-//                   {data}
-//               </tbody>
-
-
-//             </table>
-
-//             <div className="btn d-flex align-items-center gap-3">
-//               <button  onClick={() => changePage("prev")}>Prev</button>
-//               <p className='fs-3'>{page}</p>
-//               <button onClick={() => changePage("next")}>Next</button>
-//             </div>
-//             </div>
-//     </>
-//   )
-// }
-
-// export default User
-
 
 import React, { useState } from 'react';
 import { Container, Grid, Paper, TextField, Button, List, ListItem, ListItemText, IconButton, Select, MenuItem } from '@mui/material';
@@ -173,22 +71,22 @@ const App = () => {
           {editTask !== null ? 'Update Task' : 'Add Task'}
         </Button>
       </Paper>
-      <Grid container spacing={3} >
+      <Grid container spacing={3} style={{color: 'bleck'}} >
         {['open', 'pending', 'inprog', 'complete'].map((status) => (
           <Grid item xs={3} key={status}>
             <Paper elevation={3} style={{ padding: '10px' , flexWrap: 'wrap'}}>
-              <h2>{status}</h2>
+              <h2 style={{color: 'bleck'}}>{status}</h2>
               <List style={{flexWrap: 'wrap'}} >
                 {tasks.filter(task => task.status === status).map((task, index) => (
                   <ListItem key={index} >
                     <ListItemText primary={task.title} />
                     <IconButton edge="end" aria-label="edit" onClick={() => startEditTask(index)}>
                       {/* <EditIcon /> */}
-                      <FaRegEdit />
+                      <FaRegEdit style={{color: 'blue'}}/>
                     </IconButton>
-                    <IconButton edge="end" aria-label="delete" onClick={() => deleteTask(index)}>
+                    <IconButton  edge="end" aria-label="delete" onClick={() => deleteTask(index)}>
                       {/* <DeleteIcon /> */}
-                      <FaTrashAlt />
+                      <FaTrashAlt  style={{color: 'red'}}/>
 
                     </IconButton>
                   </ListItem>

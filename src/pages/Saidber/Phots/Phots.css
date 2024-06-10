@@ -25,11 +25,13 @@
 }
 
 .card_1 img {
-    width: 240px;
-    height: 150px;
+    width: 150px;
+    height: 200px;
     object-fit: cover;
-    margin-left: -20px;
+    margin-left: 20px;
     background-size: cover;
+    text-align: center;
+    
 }
 
 .span {
@@ -53,7 +55,7 @@
 .card_1 h5 {
     margin-top: 15px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -90,6 +92,7 @@
     opacity: 0;
     transition: .2s linear;
     position: absolute;
+    margin-top: 45px;
 }
 
 .card_1 {
@@ -98,7 +101,7 @@
 
 .card_1:hover button { 
     opacity: 10;
-    margin-top: -40px;
+    margin-top: 40px;
 }
 
 .text_center {
@@ -135,3 +138,4 @@
     color: white;
     text-decoration: none;
 }
+
