@@ -10,7 +10,9 @@ import { IoCartOutline } from "react-icons/io5";
 
 const Phots = () => {
 
-  
+  // useEffect(() => {
+  //   Aos.init({duration: 1000})
+  // },[])  
   
   const [user,setUser] = useState([])
   const [page,setPage] = useState(1)
@@ -21,7 +23,7 @@ const Phots = () => {
   useEffect(() =>{
     setLoading(true)
    axios
-   .get(`https://fakestoreapi.com/products?_start=${page}&_limit=${lmit}`)
+   .get(`https://fakestoreapi.com/products?limit=${lmit}`)
    .then((res) =>{
     setUser(res.data);
    })
@@ -31,16 +33,16 @@ const Phots = () => {
    .finally(() =>{
     setLoading(false)
    })
-  },[page,lmit])
+  },[lmit])
 
 
   //   C A R D S
 
   let cards  = user?.map((pro) => (
     <div key={pro.id} className="card_1"  
-    //  data-aos="flip-left"
-    // data-aos-easing="ease-out-cubic"
-    // data-aos-duration="2000"
+      data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"
     >
             <span className='span'><FaHeartBroken />  <IoCartOutline /></span>
 

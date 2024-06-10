@@ -12,9 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // import Aos from 'aos';
 
 const App = () => {
-  // useEffect(() => {
-  //   Aos.init({duration: 1000})
-  // },[])
+
   return (
     <div>
  <ToastContainer/>

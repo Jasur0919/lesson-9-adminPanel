@@ -40,6 +40,7 @@ const go = () =>{
 
 useEffect(() => {
     axios
+    // .get(`https://fakestoreapi.com/products/${id}`)
     .get(`https://fakestoreapi.com/products/${id}`)
      .then(res => setImg(res.data))  
 }, [id])
