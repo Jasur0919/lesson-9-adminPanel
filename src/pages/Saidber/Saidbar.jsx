@@ -152,13 +152,13 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
 
-        <List>
-        <Link to={'user'}>User</Link>
+        <List className='text_center'>
+        <Link className='link_bg'  to={'user'}>User</Link >
         </List>
 
         <Divider />
-        <List>
-        <Link to={'phots'}>Phots</Link>
+        <List className='text_center'>
+        <Link to={'phots'} className='link_bg'>Phots</Link>
 
         </List>
       </Drawer>

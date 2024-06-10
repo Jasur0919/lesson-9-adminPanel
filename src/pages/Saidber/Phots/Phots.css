@@ -100,3 +100,21 @@
     opacity: 10;
     margin-top: -40px;
 }
+
+.text_center {
+    text-align: center;}
+
+.link_bg {
+    background: rgb(44, 121, 236);
+    color: white;
+    /* padding: 7px 25px; */
+    width: 100px !important;
+    height: 30px !important;
+    text-decoration: none;
+    text-align: center;
+      
+}
+
+.link_bg:hover {
+    
+}

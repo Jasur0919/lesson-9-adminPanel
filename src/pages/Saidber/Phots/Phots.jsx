@@ -96,6 +96,8 @@ const Phots = () => {
               <button onClick={() => changePage("next")}>Next</button>
             </div>
             </div>
+
+            <button className='v'>as</button>
     </div>
   )
 }
