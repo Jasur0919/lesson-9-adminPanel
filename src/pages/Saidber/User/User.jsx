@@ -1,16 +1,19 @@
 import React,{useState,useEffect} from 'react'
 import './User.css'
 import axios from 'axios'
+import Loading from '../../../components/Loading/Loading'
 
 const User = () => {
   const [user,setUser] = useState([])
   const [page, setPage] = useState(1)
   const [lmit, setLmit] = useState(2)
+  const [loading, setLoading] = useState(false)
   console.log(page);
 
 
 
     useEffect(() =>{
+      setLoading(true)
      axios
      .get(`https://jsonplaceholder.typicode.com/users?_start=${page}&_limit=${lmit}`)
      .then((res) =>{
@@ -19,6 +22,8 @@ const User = () => {
      .catch(arr =>{
       console.log('>>>>>>>>>>>>>>>', arr);
      }) 
+
+     .finally(() => { setLoading(false)})
     },[page, lmit])
 
     let data = user?.map((el, inx) =>(
@@ -42,12 +47,12 @@ const User = () => {
       }
     } 
   return (
-    <div  >
+    <  >
         <h1 className='ali'>User</h1>
 
       
-<div className='smth'>
-<div className="">
+      <div className='smth'>
+      <div className="">
           <div className="sele">
             <select onChange={(e) => setLmit(e.target.value)} className='form-control  my-2'>
               <option value="" selected>Select lmit</option>
@@ -59,7 +64,12 @@ const User = () => {
             </select>
           </div>
         </div>
+       
+        {
+          loading ? <Loading/> : <></>
+        }
         <table className=' table table-bordered table-hover table-striped'>
+
               <thead className=''>
                 <tr>
                   <td>T/R</td> 
@@ -69,7 +79,9 @@ const User = () => {
                   <td>Adres</td>
                 </tr>
               </thead>
+
               <tbody>
+                
                   {data}
               </tbody>
 
@@ -82,7 +94,7 @@ const User = () => {
               <button onClick={() => changePage("next")}>Next</button>
             </div>
             </div>
-    </div>
+    </>
   )
 }
 

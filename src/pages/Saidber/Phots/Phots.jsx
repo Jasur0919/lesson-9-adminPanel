@@ -1,5 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import './Phots.css'
+import { Link } from 'react-router-dom';
+import Loading from '../../../components/Loading/Loading';
+import { toast } from 'react-toastify';
+
 import axios from 'axios'
 import { FaHeartBroken } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
@@ -11,30 +15,37 @@ const Phots = () => {
   const [user,setUser] = useState([])
   const [page,setPage] = useState(1)
   const [lmit,setLmit] = useState(2)
+  const [loading,setLoading] = useState(false)
 
   console.log(user);
   useEffect(() =>{
+    setLoading(true)
    axios
-   .get(`https://jsonplaceholder.typicode.com/Photos?_start=${page}&_limit=${lmit}`)
+   .get(`https://fakestoreapi.com/products?_start=${page}&_limit=${lmit}`)
    .then((res) =>{
     setUser(res.data);
    })
    .catch(arr =>{
     console.log('>>>>>>>>>>>>>>>', arr);
-   }) 
+   })
+   .finally(() =>{
+    setLoading(false)
+   })
   },[page,lmit])
 
 
   //   C A R D S
 
-  let cards  = user?.slice(0, 8)?.map((pro) => (
+  let cards  = user?.map((pro) => (
     <div key={pro.id} className="card_1"  
     //  data-aos="flip-left"
     // data-aos-easing="ease-out-cubic"
     // data-aos-duration="2000"
     >
             <span className='span'><FaHeartBroken />  <IoCartOutline /></span>
-            <img src={pro.thumbnailUrl} alt="" />
+
+            <Link to={`/single/${pro.id}`} onClick={() => toast.success('success')}> <img src={pro.image} alt="" /></Link>
+           
             <h5>{pro.title}</h5>
             <h3>{pro.price} 1000$ </h3>
             <button>Add mobile</button>
@@ -68,6 +79,12 @@ const Phots = () => {
             </select>
           </div>
         </div>
+
+        {
+          loading ? <Loading count={8}/>
+          :
+          <></>
+        }
       <div className="cards">
         {cards}
       </div>

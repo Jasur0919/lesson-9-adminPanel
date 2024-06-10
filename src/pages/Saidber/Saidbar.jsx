@@ -10,7 +10,7 @@ const Saidbar = () => {
     <div className="saidbar_all">
       
     <div className="saidbar_row">
-    <h1>Logo</h1>
+      <Link className='link' to={"/"}> <h1>Logo</h1> </Link>
 
         <ul className=''>
           <li className='saisbar_link'>
@@ -19,18 +19,7 @@ const Saidbar = () => {
           <li className='saisbar_link'>
             <Link to={'phots'}>Phots</Link>
           </li>
-          <li className='saisbar_link'>
-            <Link to={'todos'}>Todos</Link>
-          </li>
-          <li className='saisbar_link'>
-            <Link to={'albums'}>Albums</Link>
-          </li>
-          <li className='saisbar_link'>
-            <Link to={'comments'}>Comments</Link>
-          </li>
-          <li className='saisbar_link'>
-            <Link to={'post'}>Post</Link>
-          </li>
+         
         </ul>
       </div>
       <div className="all">
