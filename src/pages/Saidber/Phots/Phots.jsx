@@ -15,7 +15,7 @@ const Phots = () => {
   
   const [user,setUser] = useState([])
   const [page,setPage] = useState(1)
-  const [lmit,setLmit] = useState(2)
+  const [lmit,setLmit] = useState(4)
   const [loading,setLoading] = useState(false)
 
   console.log(user);
@@ -72,7 +72,6 @@ const Phots = () => {
           <div className="sele">
             <select onChange={(e) => setLmit(e.target.value)} className='form-control  my-2'>
               <option value="" selected>Select lmit</option>
-              <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>

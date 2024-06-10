@@ -3,6 +3,10 @@
     padding: 10px 0;
 }
 
+.sele select {
+    width: 300px;
+}
+
 .cards {
     margin-bottom: 50px;
     display: flex;
