@@ -6,11 +6,9 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CiHeart } from "react-icons/ci";
-// import './SingleRouter.css'
 import { GoHeart } from "react-icons/go";
 import { LuShoppingCart } from "react-icons/lu";
 import { FaStar } from "react-icons/fa6";
-// import rasm1 from '../../assets/img/rasm5.png'
 import { Link } from 'react-router-dom';
 import { VscChevronUp } from "react-icons/vsc";
 import { VscChevronDown } from "react-icons/vsc";
@@ -19,11 +17,13 @@ import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/m
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Loading from '../../components/Loading/Loading';
 
 const SingleRout = () => {
   let {id} = useParams()
 const [img, setImg] = useState("")
 const[count,setCount] = useState(0)
+const [loading, setLoading] = useState(false)
 const onclick = () =>{
   setCount(count + 1)
 }
@@ -33,14 +33,19 @@ const go = () =>{
 
 
 useEffect(() => {
+  setLoading(true)
     axios
     // .get(`https://fakestoreapi.com/products/${id}`)
     .get(`https://fakestoreapi.com/products/${id}`)
      .then(res => setImg(res.data))  
+     .finally(() => {setLoading(false)})
 }, [id])
   
   return (
     <div>
+      {
+      loading ? <Loading count={8}/> : <></>
+      }
  {/* <div className="single">
             <div className="container">
               <div className="single_row">

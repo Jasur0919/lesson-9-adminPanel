@@ -94,6 +94,13 @@ ul {
     color: white;
     text-decoration: none;
   }
+
+  .link_bg:focus {
+    background: blue !important;
+    color: white; 
+
+  }
+
   
   
   
