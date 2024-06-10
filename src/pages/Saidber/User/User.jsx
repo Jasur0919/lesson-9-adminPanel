@@ -173,14 +173,14 @@ const App = () => {
           {editTask !== null ? 'Update Task' : 'Add Task'}
         </Button>
       </Paper>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} >
         {['open', 'pending', 'inprog', 'complete'].map((status) => (
           <Grid item xs={3} key={status}>
-            <Paper elevation={3} style={{ padding: '10px' }}>
+            <Paper elevation={3} style={{ padding: '10px' , flexWrap: 'wrap'}}>
               <h2>{status}</h2>
-              <List>
+              <List style={{flexWrap: 'wrap'}} >
                 {tasks.filter(task => task.status === status).map((task, index) => (
-                  <ListItem key={index}>
+                  <ListItem key={index} >
                     <ListItemText primary={task.title} />
                     <IconButton edge="end" aria-label="edit" onClick={() => startEditTask(index)}>
                       {/* <EditIcon /> */}

@@ -20,3 +20,10 @@
     border-radius: 5px;
     padding: 5px 25px;
 }
+
+@media screen and (max-width: 900px) {
+    .grid_card {
+        grid-template-columns: repeat(3, fr1); 
+    }
+}
+
