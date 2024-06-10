@@ -12,14 +12,8 @@ import { LuShoppingCart } from "react-icons/lu";
 import { FaStar } from "react-icons/fa6";
 // import rasm1 from '../../assets/img/rasm5.png'
 import { Link } from 'react-router-dom';
-// import rasm2 from  '../../assets/img/rasm4.png'
-// import rasm3 from  '../../assets/img/rasm2.png'
-// import rasm4 from  '../../assets/img/rasm3.png'
 import { VscChevronUp } from "react-icons/vsc";
 import { VscChevronDown } from "react-icons/vsc";
-// import rasm5 from '../../assets/img/rasm10.png'
-// import Footer from '../../Components/Footer/Footer';
-// import LoadingAll from '../../Components/LoadingALL/LoadingAll';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
 import 'swiper/css';
