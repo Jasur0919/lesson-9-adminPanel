@@ -97,7 +97,6 @@ const Phots = () => {
             </div>
             </div>
 
-            <button className='v'>as</button>
     </div>
   )
 }

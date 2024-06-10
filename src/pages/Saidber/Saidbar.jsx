@@ -158,7 +158,7 @@ export default function PersistentDrawerLeft() {
 
         <Divider />
         <List className='text_center'>
-        <Link to={'phots'} className='link_bg'>Phots</Link>
+        <Link to={'phots'} className='link_bg_last'>Phots</Link>
 
         </List>
       </Drawer>
